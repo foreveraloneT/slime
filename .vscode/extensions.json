@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "abumalick.vscode-nvm",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint"
+  ]
+}

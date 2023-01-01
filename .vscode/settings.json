@@ -1,0 +1,19 @@
+{
+  "eslint.validate": [
+    "javascript",
+    "typescript"
+  ],
+  "eslint.packageManager": "npm",
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.tslint": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "typescript.tsdk": "./node_modules/typescript/lib",
+}
