@@ -1,5 +1,5 @@
 {
-  "name": "slime",
+  "name": "slime-wrapper",
   "version": "0.1.0",
   "description": "Wrapper class for Typescript",
   "main": "lib/cjs/index.js",
