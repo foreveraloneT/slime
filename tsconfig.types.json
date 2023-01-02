@@ -1,9 +1,9 @@
 {
   "extends": "@tsconfig/recommended/tsconfig.json",
+  "include": ["src/**/*.ts"],
   "compilerOptions": {
     "declaration": true,
     "declarationDir": "lib/types"
   },
-  "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "src/**/__tests__/**"]
 }

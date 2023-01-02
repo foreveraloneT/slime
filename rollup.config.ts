@@ -3,6 +3,7 @@
 
 import { readdirSync, statSync } from 'fs';
 import typescript from '@rollup/plugin-typescript';
+import dts from 'rollup-plugin-dts';
 
 const EXCLUDES = [
   '/__tests__/',
@@ -32,23 +33,43 @@ const treeShakingInput2 = scan('src/utils', /(js|ts)$/)
 console.log('Tree shaking 1', treeShakingInput1);
 console.log('Tree shaking 2', treeShakingInput2);
 
-const cjs = {
+const esm = {
   input: 'src/index.ts',
   output: {
-    dir: 'lib',
-    format: 'cjs',
+    dir: 'lib/esm',
+    format: 'esm',
   },
   plugins: [
-    typescript({
-      tsconfig: 'tsconfig.build.json', // we need to emit .d.ts here
-    }),
+    typescript(),
   ],
 };
 
-const cjsTreeShaking1 = {
+const esmTreeShaking1 = {
   input: treeShakingInput1,
   output: {
-    dir: 'lib',
+    dir: 'lib/esm',
+    format: 'esm',
+  },
+  plugins: [
+    typescript(),
+  ],
+};
+
+const esmTreeShaking2 = {
+  input: treeShakingInput2,
+  output: {
+    dir: 'lib/esm/utils',
+    format: 'esm',
+  },
+  plugins: [
+    typescript(),
+  ],
+};
+
+const cjs = {
+  input: treeShakingInput2,
+  output: {
+    dir: 'lib/cjs',
     format: 'cjs',
   },
   plugins: [
@@ -56,19 +77,21 @@ const cjsTreeShaking1 = {
   ],
 };
 
-const cjsTreeShaking2 = {
-  input: treeShakingInput2,
+const types = {
+  input: 'src/index.ts',
   output: {
-    dir: 'lib/utils',
-    format: 'cjs',
+    dir: 'lib/types',
+    format: 'esm',
   },
   plugins: [
-    typescript(),
+    dts(),
   ],
 };
 
 export default [
+  esm,
+  esmTreeShaking1,
+  esmTreeShaking2,
   cjs,
-  cjsTreeShaking1,
-  cjsTreeShaking2,
+  types,
 ];
