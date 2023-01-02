@@ -7,7 +7,7 @@
     "test": "jest --config=jest.config.js",
     "lint": "eslint --ext .js,.ts src",
     "build:types": "npx tsc --emitDeclarationOnly --project tsconfig.types.json",
-    "build": "rimraf ./lib && rollup --config rollup.config.ts --configPlugin typescript && npm run build:types"
+    "build": "rimraf ./lib && rollup --config rollup.config.ts --configPlugin typescript"
   },
   "author": "foreverAloneT",
   "license": "ISC",

@@ -67,7 +67,7 @@ const esmTreeShaking2 = {
 };
 
 const cjs = {
-  input: treeShakingInput2,
+  input: 'src/index.ts',
   output: {
     dir: 'lib/cjs',
     format: 'cjs',
@@ -89,9 +89,9 @@ const types = {
 };
 
 export default [
-  esm,
-  esmTreeShaking1,
-  esmTreeShaking2,
+  // esm,
+  // esmTreeShaking1,
+  // esmTreeShaking2,
   cjs,
   types,
 ];
