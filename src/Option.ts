@@ -3,15 +3,15 @@
 import Wrapper, { Matcher as BaseMatcher } from '@/Wrapper';
 import { isNoneValue } from '@/utils/validate';
 
-interface Matcher<T, U> extends BaseMatcher<T, U>{
+interface Matcher<T, U> extends BaseMatcher<U>{
   some: (value: T) => U;
   none: () => U;
 }
 
 export default abstract class Option<T> extends Wrapper<T> {
-  public abstract map<U>(callbackFn: (value: T) => U): Option<U>;
-
   public abstract match<U>(matcher: Matcher<T, U>): U;
+
+  public abstract map<U>(callbackFn: (value: T) => U): Option<U>;
 
   public abstract flatMap<U>(callbackFn: (value: T) => Option<U>): Option<U>;
 
@@ -51,6 +51,10 @@ export class Some<T> extends Option<T> {
     return callbackFn(this.value);
   }
 
+  public catchMap(callbackFn: () => Some<T>): Some<T> {
+    return new Some(this.value);
+  }
+
   public unwrap(): T {
     return this.value;
   }
@@ -77,8 +81,12 @@ export class None<T> extends Option<T> {
     return new None();
   }
 
-  public flatMap<U>(callbackFn: (value: T) => Option<U>): Option<U> {
+  public flatMap<U>(callbackFn: (value: T) => Option<U>): None<U> {
     return new None();
+  }
+
+  public catchMap(callbackFn: () => Option<T>): Option<T> {
+    return callbackFn();
   }
 
   public unwrap(): T {

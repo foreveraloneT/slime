@@ -1,4 +1,5 @@
 import Option, { Some, None } from '@/Option';
+
 import { isNoneValue } from './validate';
 
 export function from<T>(value: T): Option<T> {
@@ -18,3 +19,9 @@ export function none<T>(): None<T> {
 export function fromPromise<T>(promise: Promise<T>): Promise<Option<T>> {
   return promise.then(some).catch(() => none<T>());
 }
+
+export {
+  Option,
+  Some,
+  None,
+};
