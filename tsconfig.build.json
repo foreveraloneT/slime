@@ -2,7 +2,7 @@
   "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "lib/esm/types"
+    "declarationDir": "lib/cjs/types"
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "src/**/__tests__/**"]

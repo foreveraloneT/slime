@@ -32,11 +32,11 @@ const treeShakingInput2 = scan('src/utils', /(js|ts)$/)
 console.log('Tree shaking 1', treeShakingInput1);
 console.log('Tree shaking 2', treeShakingInput2);
 
-const esm = {
+const cjs = {
   input: 'src/index.ts',
   output: {
-    dir: 'lib/esm',
-    format: 'esm',
+    dir: 'lib/cjs',
+    format: 'cjs',
   },
   plugins: [
     typescript({
@@ -45,30 +45,8 @@ const esm = {
   ],
 };
 
-const esmTreeShaking1 = {
+const cjsTreeShaking1 = {
   input: treeShakingInput1,
-  output: {
-    dir: 'lib/esm',
-    format: 'esm',
-  },
-  plugins: [
-    typescript(),
-  ],
-};
-
-const esmShakingEsm2 = {
-  input: treeShakingInput2,
-  output: {
-    dir: 'lib/esm/utils',
-    format: 'esm',
-  },
-  plugins: [
-    typescript(),
-  ],
-};
-
-const cjs = {
-  input: 'src/index.ts',
   output: {
     dir: 'lib/cjs',
     format: 'cjs',
@@ -78,9 +56,19 @@ const cjs = {
   ],
 };
 
+const cjsTreeShaking2 = {
+  input: treeShakingInput2,
+  output: {
+    dir: 'lib/cjs/utils',
+    format: 'cjs',
+  },
+  plugins: [
+    typescript(),
+  ],
+};
+
 export default [
-  esm,
-  esmTreeShaking1,
-  esmShakingEsm2,
   cjs,
+  cjsTreeShaking1,
+  cjsTreeShaking2,
 ];
