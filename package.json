@@ -1,6 +1,6 @@
 {
   "name": "slime-wrapper",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Wrapper class for Typescript",
   "main": "lib/cjs/index.js",
   "scripts": {
