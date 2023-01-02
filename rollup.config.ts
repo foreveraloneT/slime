@@ -35,7 +35,7 @@ console.log('Tree shaking 2', treeShakingInput2);
 const cjs = {
   input: 'src/index.ts',
   output: {
-    dir: 'lib/cjs',
+    dir: 'lib',
     format: 'cjs',
   },
   plugins: [
@@ -48,7 +48,7 @@ const cjs = {
 const cjsTreeShaking1 = {
   input: treeShakingInput1,
   output: {
-    dir: 'lib/cjs',
+    dir: 'lib',
     format: 'cjs',
   },
   plugins: [
@@ -59,7 +59,7 @@ const cjsTreeShaking1 = {
 const cjsTreeShaking2 = {
   input: treeShakingInput2,
   output: {
-    dir: 'lib/cjs/utils',
+    dir: 'lib/utils',
     format: 'cjs',
   },
   plugins: [
