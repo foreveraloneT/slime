@@ -2,7 +2,7 @@
   "name": "slime-wrapper",
   "version": "0.2.3",
   "description": "Wrapper class for Typescript",
-  "main": "lib/index.js",
+  "main": "lib/cjs/index.js",
   "scripts": {
     "test": "jest --config=jest.config.js",
     "lint": "eslint --ext .js,.ts src",
