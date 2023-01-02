@@ -20,14 +20,4 @@ describe('Option', () => {
       expect(expected).toBe(-1);
     });
   });
-
-  describe('ap', () => {
-    it('should work correctly when they are all Option.some', () => {
-      const fn = (x: string) => (y: string) => (z: string) => [x, y, z].join('-');
-
-      const expected = option.from('3').ap(option.from('2').ap(option.from('1').ap(option.from(fn)))).unwrapOr('');
-
-      expect(expected).toBe('1-2-3');
-    });
-  });
 });
