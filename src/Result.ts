@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import Wrapper, { Matcher as BaseMatcher } from '@/Wrapper';
+import Wrapper, { Matcher as BaseMatcher } from './Wrapper';
 import { isNoneValue } from './utils/validate';
 
 interface Matcher<T1, T2, U> extends BaseMatcher<U>{

@@ -1,4 +1,4 @@
-import * as option from '@/utils/option';
+import * as option from '../utils/option';
 
 describe('Option', () => {
   describe('map', () => {

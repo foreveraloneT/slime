@@ -1,4 +1,4 @@
-import Option, { Some, None } from '@/Option';
+import Option, { Some, None } from '../Option';
 
 import { isNoneValue } from './validate';
 

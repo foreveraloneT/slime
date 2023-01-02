@@ -1,4 +1,4 @@
-import Result, { Ok, Err } from '@/Result';
+import Result, { Ok, Err } from '../Result';
 
 import { isNoneValue } from './validate';
 
@@ -17,7 +17,7 @@ export function err<T1, T2>(value: T2): Err<T1, T2> {
 }
 
 export function fromPromise<T>(promise: Promise<T>): Promise<Result<T, Error>> {
-  return promise.then(ok).catch((error) => err<T, Error>(error));
+  return promise.then((value) => ok<T, Error>(value)).catch((error) => err<T, Error>(error));
 }
 
 export {
