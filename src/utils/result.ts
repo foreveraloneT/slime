@@ -2,10 +2,11 @@ import Result, { Ok, Err } from '../Result';
 
 import { isNoneValue } from './validate';
 
-export function from<T>(value: T): Result<T, Error> {
+export function from<T>(value?: T): Result<T, Error> {
   if (isNoneValue(value)) return new Err(new Error('empty result'));
 
-  return new Ok(value);
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  return new Ok(value!);
 }
 
 export function ok<T1, T2>(value: T1): Ok<T1, T2> {

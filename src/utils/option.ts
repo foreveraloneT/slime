@@ -2,10 +2,11 @@ import Option, { Some, None } from '../Option';
 
 import { isNoneValue } from './validate';
 
-export function from<T>(value: T): Option<T> {
+export function from<T>(value?: T): Option<T> {
   if (isNoneValue(value)) return new None();
 
-  return new Some(value);
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  return new Some(value!);
 }
 
 export function some<T>(value: T): Some<T> {
