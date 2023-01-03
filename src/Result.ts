@@ -3,35 +3,35 @@
 import Wrapper, { Matcher as BaseMatcher } from './Wrapper';
 import { isNoneValue } from './utils/validate';
 
-interface Matcher<T1, T2, U> extends BaseMatcher<U>{
-  ok: (value: T1) => U;
-  err: (value: T2) => U;
+interface Matcher<T, E, U> extends BaseMatcher<U>{
+  ok: (value: T) => U;
+  err: (value: E) => U;
 }
 
-export default abstract class Result<T1, T2 = Error> extends Wrapper<T1> {
-  public abstract unwrapErr(): T2;
+export default abstract class Result<T, E = Error> extends Wrapper<T> {
+  public abstract unwrapErr(): E;
 
-  public abstract unwrapErrOr(value: T2): T2;
+  public abstract unwrapErrOr(value: E): E;
 
-  public abstract match<U>(matcher: Matcher<T1, T2, U>): U;
+  public abstract match<U>(matcher: Matcher<T, E, U>): U;
 
-  public abstract map<U>(callbackFn: (value: T1) => U): Result<U, T2>;
+  public abstract map<U>(callbackFn: (value: T) => U): Result<U, E>;
 
-  public abstract mapErr<U>(callbackFn: (value: T2) => U): Result<T1, U>;
+  public abstract mapErr<U>(callbackFn: (value: E) => U): Result<T, U>;
 
-  public abstract flatMap<U>(callbackFn: (value: T1) => Result<U, T2>): Result<U, T2>;
+  public abstract flatMap<U>(callbackFn: (value: T) => Result<U, E>): Result<U, E>;
 
-  public abstract flatMapErr<U>(callbackFn: (value: T2) => Result<T1, U>): Result<T1, U>;
+  public abstract flatMapErr<U>(callbackFn: (value: E) => Result<T, U>): Result<T, U>;
 
   public abstract isOk(): boolean;
 
   public abstract isErr(): boolean;
 }
 
-export class Ok<T1, T2> extends Result<T1, T2> {
-  private readonly value: T1;
+export class Ok<T, E> extends Result<T, E> {
+  private readonly value: T;
 
-  constructor(value: T1) {
+  constructor(value: T) {
     if (isNoneValue(value)) throw new Error('Result.Ok should not be empty');
 
     super();
@@ -39,43 +39,43 @@ export class Ok<T1, T2> extends Result<T1, T2> {
     this.value = value;
   }
 
-  public unwrap(): T1 {
+  public unwrap(): T {
     return this.value;
   }
 
-  public unwrapOr(value: T1): T1 {
+  public unwrapOr(value: T): T {
     return this.value;
   }
 
-  public unwrapErr(): T2 {
+  public unwrapErr(): E {
     throw new ReferenceError('Unable to unwrapErr Result.OK');
   }
 
-  public unwrapErrOr(value: T2): T2 {
+  public unwrapErrOr(value: E): E {
     return value;
   }
 
-  public match<U>(matcher: Matcher<T1, T2, U>): U {
+  public match<U>(matcher: Matcher<T, E, U>): U {
     return matcher.ok(this.value);
   }
 
-  public map<U>(callbackFn: (value: T1) => U): Ok<U, T2> {
+  public map<U>(callbackFn: (value: T) => U): Ok<U, E> {
     return new Ok(callbackFn(this.value));
   }
 
-  public mapErr<U>(callbackFn: (value: T2) => U): Ok<T1, U> {
+  public mapErr<U>(callbackFn: (value: E) => U): Ok<T, U> {
     return new Ok(this.value);
   }
 
-  public flatMap<U>(callbackFn: (value: T1) => Result<U, T2>): Result<U, T2> {
+  public flatMap<U>(callbackFn: (value: T) => Result<U, E>): Result<U, E> {
     return callbackFn(this.value);
   }
 
-  public flatMapErr<U>(callbackFn: (value: T2) => Result<T1, U>): Result<T1, U> {
+  public flatMapErr<U>(callbackFn: (value: E) => Result<T, U>): Result<T, U> {
     return new Ok(this.value);
   }
 
-  public catchMap(callbackFn: () => Result<T1, T2>): Ok<T1, T2> {
+  public catchMap(callbackFn: () => Result<T, E>): Ok<T, E> {
     return new Ok(this.value);
   }
 
@@ -88,10 +88,10 @@ export class Ok<T1, T2> extends Result<T1, T2> {
   }
 }
 
-export class Err<T1, T2> extends Result<T1, T2> {
-  private readonly value: T2;
+export class Err<T, E> extends Result<T, E> {
+  private readonly value: E;
 
-  constructor(value: T2) {
+  constructor(value: E) {
     if (isNoneValue(value)) throw new Error('Result.Ok should not be empty');
 
     super();
@@ -99,43 +99,43 @@ export class Err<T1, T2> extends Result<T1, T2> {
     this.value = value;
   }
 
-  public unwrap(): T1 {
+  public unwrap(): T {
     throw new ReferenceError('unable to unwrap Result.Err');
   }
 
-  public unwrapOr(value: T1): T1 {
+  public unwrapOr(value: T): T {
     return value;
   }
 
-  public unwrapErr(): T2 {
+  public unwrapErr(): E {
     return this.value;
   }
 
-  public unwrapErrOr(value: T2): T2 {
+  public unwrapErrOr(value: E): E {
     return this.value;
   }
 
-  public match<U>(matcher: Matcher<T1, T2, U>): U {
+  public match<U>(matcher: Matcher<T, E, U>): U {
     return matcher.err(this.value);
   }
 
-  public map<U>(callbackFn: (value: T1) => U): Err<U, T2> {
+  public map<U>(callbackFn: (value: T) => U): Err<U, E> {
     return new Err(this.value);
   }
 
-  public mapErr<U>(callbackFn: (value: T2) => U): Err<T1, U> {
+  public mapErr<U>(callbackFn: (value: E) => U): Err<T, U> {
     return new Err(callbackFn(this.value));
   }
 
-  public flatMap<U>(callbackFn: (value: T1) => Result<U, T2>): Err<U, T2> {
+  public flatMap<U>(callbackFn: (value: T) => Result<U, E>): Err<U, E> {
     return new Err(this.value);
   }
 
-  public flatMapErr<U>(callbackFn: (value: T2) => Result<T1, U>): Result<T1, U> {
+  public flatMapErr<U>(callbackFn: (value: E) => Result<T, U>): Result<T, U> {
     return callbackFn(this.value);
   }
 
-  public catchMap(callbackFn: () => Result<T1, T2>): Result<T1, T2> {
+  public catchMap(callbackFn: () => Result<T, E>): Result<T, E> {
     return callbackFn();
   }
 

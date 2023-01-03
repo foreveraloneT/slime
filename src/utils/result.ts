@@ -9,11 +9,11 @@ export function from<T>(value?: T): Result<T, Error> {
   return new Ok(value!);
 }
 
-export function ok<T1, T2>(value: T1): Ok<T1, T2> {
+export function ok<T, E>(value: T): Ok<T, E> {
   return new Ok(value);
 }
 
-export function err<T1, T2>(value: T2): Err<T1, T2> {
+export function err<T, E>(value: E): Err<T, E> {
   return new Err(value);
 }
 
