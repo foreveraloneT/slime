@@ -7,6 +7,7 @@
     "test": "jest --config=jest.config.js",
     "lint": "eslint --ext .js,.ts src",
     "build:types": "npx tsc --emitDeclarationOnly --project tsconfig.types.json",
+    "build:docs": "rimraf ./docs && typedoc --plugin typedoc-plugin-markdown --out docs --includeVersion --excludeNotDocumented src/index.ts",
     "build": "rimraf ./lib && rollup --config rollup.config.ts --configPlugin typescript"
   },
   "author": "foreverAloneT",
@@ -26,6 +27,8 @@
     "rollup": "^3.9.0",
     "rollup-plugin-dts": "^5.1.0",
     "ts-jest": "^29.0.3",
+    "typedoc": "^0.23.23",
+    "typedoc-plugin-markdown": "^3.14.0",
     "typescript": "^4.9.4"
   },
   "types": "types/index.d.ts",

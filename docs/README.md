@@ -1,3 +1,5 @@
+slime-wrapper / [Exports](modules.md)
+
 # slime-wrapper
 
 ## Installation
