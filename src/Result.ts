@@ -236,7 +236,7 @@ export class Err<T, E> extends Result<T, E> {
   private readonly value: E;
 
   constructor(value: E) {
-    if (isNoneValue(value)) throw new Error('Result.Ok should not be empty');
+    if (isNoneValue(value)) throw new Error('Result.Err should not be empty');
 
     super();
 

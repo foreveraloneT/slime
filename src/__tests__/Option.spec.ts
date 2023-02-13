@@ -111,7 +111,7 @@ describe('Option', () => {
       expect(expected).toBe(-1);
     });
 
-    it('should flatMap to Option.None when is is Option.None', () => {
+    it('should flatMap to Option.None when it is Option.None', () => {
       const val = option.none<number>();
 
       const expected = val.flatMap((i) => option.from(i * i)).unwrapOr(-1);
