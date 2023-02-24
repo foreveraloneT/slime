@@ -12,6 +12,7 @@
   },
   "author": "foreverAloneT",
   "license": "ISC",
+  "homepage": "https://github.com/foreveraloneT/slime",
   "devDependencies": {
     "@rollup/plugin-typescript": "^10.0.1",
     "@tsconfig/recommended": "^1.0.1",

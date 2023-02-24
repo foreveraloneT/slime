@@ -83,8 +83,8 @@ console.log(result2) // 'Error code: 404'
 
 ## API Docs
 
-[Full API Documentation](docs/modules.md)
+[Full API Documentation](https://github.com/foreveraloneT/slime/blob/main/docs/modules.md)
 
 ## License
 
-See [LICENSE](LICENSE)
+See [LICENSE](https://github.com/foreveraloneT/slime/blob/main/LICENSE)
