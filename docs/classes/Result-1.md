@@ -60,7 +60,7 @@ A `Result<T, E>`
 
 #### Defined in
 
-[Result.ts:98](https://github.com/foreveraloneT/slime/blob/f365186/src/Result.ts#L98)
+[Result.ts:98](https://github.com/foreveraloneT/slime/blob/main/src/Result.ts#L98)
 
 ___
 
@@ -90,7 +90,7 @@ Returns `Some<T>` with contained `Err<T, E>` value. Otherwise returns `None`
 
 #### Defined in
 
-[Result.ts:140](https://github.com/foreveraloneT/slime/blob/f365186/src/Result.ts#L140)
+[Result.ts:140](https://github.com/foreveraloneT/slime/blob/main/src/Result.ts#L140)
 
 ___
 
@@ -124,7 +124,7 @@ A `Result<U, E>` that contains a result of calling callbackFn and flatten it
 
 #### Defined in
 
-[Result.ts:84](https://github.com/foreveraloneT/slime/blob/f365186/src/Result.ts#L84)
+[Result.ts:84](https://github.com/foreveraloneT/slime/blob/main/src/Result.ts#L84)
 
 ___
 
@@ -154,7 +154,7 @@ A `Result<T, U>` that contains a result of calling callbackFn and flatten it
 
 #### Defined in
 
-[Result.ts:91](https://github.com/foreveraloneT/slime/blob/f365186/src/Result.ts#L91)
+[Result.ts:91](https://github.com/foreveraloneT/slime/blob/main/src/Result.ts#L91)
 
 ___
 
@@ -184,7 +184,7 @@ Uses for development propose only. Should not use for production.
 
 #### Defined in
 
-[Result.ts:147](https://github.com/foreveraloneT/slime/blob/f365186/src/Result.ts#L147)
+[Result.ts:147](https://github.com/foreveraloneT/slime/blob/main/src/Result.ts#L147)
 
 ___
 
@@ -210,7 +210,7 @@ Uses for development propose only. Should not use for production.
 
 #### Defined in
 
-[Result.ts:154](https://github.com/foreveraloneT/slime/blob/f365186/src/Result.ts#L154)
+[Result.ts:154](https://github.com/foreveraloneT/slime/blob/main/src/Result.ts#L154)
 
 ___
 
@@ -228,7 +228,7 @@ A boolean
 
 #### Defined in
 
-[Result.ts:110](https://github.com/foreveraloneT/slime/blob/f365186/src/Result.ts#L110)
+[Result.ts:110](https://github.com/foreveraloneT/slime/blob/main/src/Result.ts#L110)
 
 ___
 
@@ -246,7 +246,7 @@ A boolean
 
 #### Defined in
 
-[Result.ts:104](https://github.com/foreveraloneT/slime/blob/f365186/src/Result.ts#L104)
+[Result.ts:104](https://github.com/foreveraloneT/slime/blob/main/src/Result.ts#L104)
 
 ___
 
@@ -280,7 +280,7 @@ A `Result<U, E>` that contains a result of calling callbackFn
 
 #### Defined in
 
-[Result.ts:70](https://github.com/foreveraloneT/slime/blob/f365186/src/Result.ts#L70)
+[Result.ts:70](https://github.com/foreveraloneT/slime/blob/main/src/Result.ts#L70)
 
 ___
 
@@ -310,7 +310,7 @@ A `Result<T, U>` that contains a result of calling callbackFn
 
 #### Defined in
 
-[Result.ts:77](https://github.com/foreveraloneT/slime/blob/f365186/src/Result.ts#L77)
+[Result.ts:77](https://github.com/foreveraloneT/slime/blob/main/src/Result.ts#L77)
 
 ___
 
@@ -361,7 +361,7 @@ value (or void) from matcher's callback function
 
 #### Defined in
 
-[Result.ts:63](https://github.com/foreveraloneT/slime/blob/f365186/src/Result.ts#L63)
+[Result.ts:63](https://github.com/foreveraloneT/slime/blob/main/src/Result.ts#L63)
 
 ___
 
@@ -390,7 +390,7 @@ Returns `Some<T>` with contained `Ok<T, E>` value. Otherwise returns `None`
 
 #### Defined in
 
-[Result.ts:125](https://github.com/foreveraloneT/slime/blob/f365186/src/Result.ts#L125)
+[Result.ts:125](https://github.com/foreveraloneT/slime/blob/main/src/Result.ts#L125)
 
 ___
 
@@ -416,7 +416,7 @@ A value in `Ok<T, E>`
 
 #### Defined in
 
-[Result.ts:22](https://github.com/foreveraloneT/slime/blob/f365186/src/Result.ts#L22)
+[Result.ts:22](https://github.com/foreveraloneT/slime/blob/main/src/Result.ts#L22)
 
 ___
 
@@ -438,7 +438,7 @@ A value in `Err<T, E>`
 
 #### Defined in
 
-[Result.ts:37](https://github.com/foreveraloneT/slime/blob/f365186/src/Result.ts#L37)
+[Result.ts:37](https://github.com/foreveraloneT/slime/blob/main/src/Result.ts#L37)
 
 ___
 
@@ -462,7 +462,7 @@ A value in `Err<T, E>` or a default value
 
 #### Defined in
 
-[Result.ts:44](https://github.com/foreveraloneT/slime/blob/f365186/src/Result.ts#L44)
+[Result.ts:44](https://github.com/foreveraloneT/slime/blob/main/src/Result.ts#L44)
 
 ___
 
@@ -486,4 +486,4 @@ A value in `Ok<T, E>` or a default value
 
 #### Defined in
 
-[Result.ts:29](https://github.com/foreveraloneT/slime/blob/f365186/src/Result.ts#L29)
+[Result.ts:29](https://github.com/foreveraloneT/slime/blob/main/src/Result.ts#L29)

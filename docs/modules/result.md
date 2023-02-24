@@ -44,7 +44,7 @@ Returns `Err<T, E>`
 
 #### Defined in
 
-[utils/result.ts:34](https://github.com/foreveraloneT/slime/blob/f365186/src/utils/result.ts#L34)
+[utils/result.ts:34](https://github.com/foreveraloneT/slime/blob/main/src/utils/result.ts#L34)
 
 ___
 
@@ -75,7 +75,7 @@ Otherwise, return `Err<T,Error>`
 
 #### Defined in
 
-[utils/result.ts:11](https://github.com/foreveraloneT/slime/blob/f365186/src/utils/result.ts#L11)
+[utils/result.ts:11](https://github.com/foreveraloneT/slime/blob/main/src/utils/result.ts#L11)
 
 ___
 
@@ -105,7 +105,7 @@ Promise of `Ok<T, Error>` if Promise is resolved. If it rejected, returns `Err<T
 
 #### Defined in
 
-[utils/result.ts:43](https://github.com/foreveraloneT/slime/blob/f365186/src/utils/result.ts#L43)
+[utils/result.ts:43](https://github.com/foreveraloneT/slime/blob/main/src/utils/result.ts#L43)
 
 ___
 
@@ -140,4 +140,4 @@ Returns `Ok<T, E>`
 
 #### Defined in
 
-[utils/result.ts:24](https://github.com/foreveraloneT/slime/blob/f365186/src/utils/result.ts#L24)
+[utils/result.ts:24](https://github.com/foreveraloneT/slime/blob/main/src/utils/result.ts#L24)

@@ -53,7 +53,7 @@ A `Option<T>`
 
 #### Defined in
 
-[Option.ts:69](https://github.com/foreveraloneT/slime/blob/f365186/src/Option.ts#L69)
+[Option.ts:69](https://github.com/foreveraloneT/slime/blob/main/src/Option.ts#L69)
 
 ___
 
@@ -87,7 +87,7 @@ A `Option<U>` that contains a result of calling callbackFn and flatten it
 
 #### Defined in
 
-[Option.ts:62](https://github.com/foreveraloneT/slime/blob/f365186/src/Option.ts#L62)
+[Option.ts:62](https://github.com/foreveraloneT/slime/blob/main/src/Option.ts#L62)
 
 ___
 
@@ -117,7 +117,7 @@ Uses for development propose only. Should not use for production.
 
 #### Defined in
 
-[Option.ts:88](https://github.com/foreveraloneT/slime/blob/f365186/src/Option.ts#L88)
+[Option.ts:88](https://github.com/foreveraloneT/slime/blob/main/src/Option.ts#L88)
 
 ___
 
@@ -135,7 +135,7 @@ A boolean
 
 #### Defined in
 
-[Option.ts:81](https://github.com/foreveraloneT/slime/blob/f365186/src/Option.ts#L81)
+[Option.ts:81](https://github.com/foreveraloneT/slime/blob/main/src/Option.ts#L81)
 
 ___
 
@@ -153,7 +153,7 @@ A boolean
 
 #### Defined in
 
-[Option.ts:75](https://github.com/foreveraloneT/slime/blob/f365186/src/Option.ts#L75)
+[Option.ts:75](https://github.com/foreveraloneT/slime/blob/main/src/Option.ts#L75)
 
 ___
 
@@ -187,7 +187,7 @@ A `Option<U>` that contains a result of calling callbackFn
 
 #### Defined in
 
-[Option.ts:55](https://github.com/foreveraloneT/slime/blob/f365186/src/Option.ts#L55)
+[Option.ts:55](https://github.com/foreveraloneT/slime/blob/main/src/Option.ts#L55)
 
 ___
 
@@ -238,7 +238,7 @@ value (or void) from matcher's callback function
 
 #### Defined in
 
-[Option.ts:48](https://github.com/foreveraloneT/slime/blob/f365186/src/Option.ts#L48)
+[Option.ts:48](https://github.com/foreveraloneT/slime/blob/main/src/Option.ts#L48)
 
 ___
 
@@ -264,7 +264,7 @@ A value in `Some<T>`
 
 #### Defined in
 
-[Option.ts:22](https://github.com/foreveraloneT/slime/blob/f365186/src/Option.ts#L22)
+[Option.ts:22](https://github.com/foreveraloneT/slime/blob/main/src/Option.ts#L22)
 
 ___
 
@@ -288,4 +288,4 @@ A value in `Some<T>` or a default value
 
 #### Defined in
 
-[Option.ts:29](https://github.com/foreveraloneT/slime/blob/f365186/src/Option.ts#L29)
+[Option.ts:29](https://github.com/foreveraloneT/slime/blob/main/src/Option.ts#L29)

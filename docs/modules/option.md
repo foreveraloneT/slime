@@ -40,7 +40,7 @@ Otherwise, return `None`
 
 #### Defined in
 
-[utils/option.ts:11](https://github.com/foreveraloneT/slime/blob/f365186/src/utils/option.ts#L11)
+[utils/option.ts:11](https://github.com/foreveraloneT/slime/blob/main/src/utils/option.ts#L11)
 
 ___
 
@@ -70,7 +70,7 @@ Promise of `Some<T>` if Promise is resolved. If it rejected, returns `None`
 
 #### Defined in
 
-[utils/option.ts:41](https://github.com/foreveraloneT/slime/blob/f365186/src/utils/option.ts#L41)
+[utils/option.ts:41](https://github.com/foreveraloneT/slime/blob/main/src/utils/option.ts#L41)
 
 ___
 
@@ -94,7 +94,7 @@ Returns `None<T>`
 
 #### Defined in
 
-[utils/option.ts:32](https://github.com/foreveraloneT/slime/blob/f365186/src/utils/option.ts#L32)
+[utils/option.ts:32](https://github.com/foreveraloneT/slime/blob/main/src/utils/option.ts#L32)
 
 ___
 
@@ -128,4 +128,4 @@ Returns `Some<T>`
 
 #### Defined in
 
-[utils/option.ts:24](https://github.com/foreveraloneT/slime/blob/f365186/src/utils/option.ts#L24)
+[utils/option.ts:24](https://github.com/foreveraloneT/slime/blob/main/src/utils/option.ts#L24)

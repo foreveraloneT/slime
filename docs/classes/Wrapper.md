@@ -56,7 +56,7 @@ A `Wrapper<U>` that contains a result of calling callbackFn and flatten it
 
 #### Defined in
 
-[Wrapper.ts:32](https://github.com/foreveraloneT/slime/blob/f365186/src/Wrapper.ts#L32)
+[Wrapper.ts:32](https://github.com/foreveraloneT/slime/blob/main/src/Wrapper.ts#L32)
 
 ___
 
@@ -82,7 +82,7 @@ Uses for development propose only. Should not use for production.
 
 #### Defined in
 
-[Wrapper.ts:45](https://github.com/foreveraloneT/slime/blob/f365186/src/Wrapper.ts#L45)
+[Wrapper.ts:45](https://github.com/foreveraloneT/slime/blob/main/src/Wrapper.ts#L45)
 
 ___
 
@@ -112,7 +112,7 @@ A `Wrapper<U>` that contains a result of calling callbackFn
 
 #### Defined in
 
-[Wrapper.ts:25](https://github.com/foreveraloneT/slime/blob/f365186/src/Wrapper.ts#L25)
+[Wrapper.ts:25](https://github.com/foreveraloneT/slime/blob/main/src/Wrapper.ts#L25)
 
 ___
 
@@ -144,7 +144,7 @@ See [https://doc.rust-lang.org/book/ch18-03-pattern-syntax.html](https://doc.rus
 
 #### Defined in
 
-[Wrapper.ts:38](https://github.com/foreveraloneT/slime/blob/f365186/src/Wrapper.ts#L38)
+[Wrapper.ts:38](https://github.com/foreveraloneT/slime/blob/main/src/Wrapper.ts#L38)
 
 ___
 
@@ -162,4 +162,4 @@ A value in `Wrapper<T>`
 
 #### Defined in
 
-[Wrapper.ts:18](https://github.com/foreveraloneT/slime/blob/f365186/src/Wrapper.ts#L18)
+[Wrapper.ts:18](https://github.com/foreveraloneT/slime/blob/main/src/Wrapper.ts#L18)

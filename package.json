@@ -7,7 +7,7 @@
     "test": "jest --config=jest.config.js",
     "lint": "eslint --ext .js,.ts src",
     "build:types": "npx tsc --emitDeclarationOnly --project tsconfig.types.json",
-    "build:docs": "rimraf ./docs && typedoc --plugin typedoc-plugin-markdown --out docs --includeVersion --excludeNotDocumented src/index.ts",
+    "build:docs": "rimraf ./docs && typedoc --plugin typedoc-plugin-markdown --gitRevision main --out docs --excludeNotDocumented src/index.ts",
     "build": "rimraf ./lib && rollup --config rollup.config.ts --configPlugin typescript"
   },
   "author": "foreverAloneT",
